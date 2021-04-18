@@ -1,0 +1,4 @@
+table_name = "teste"
+columns = "a, b, c, d, e, f"
+pk = "f"
+file_name = "log.log"
