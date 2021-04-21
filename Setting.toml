@@ -1,4 +1,4 @@
-table_name = "teste"
-columns = "a, b, c, d, e, f"
-pk = "f"
-file_name = "log.log"
+table_name = "final"
+columns = "a, b, c, d, e, f, x, w, id"
+pk = "id"
+file_name = "final_test.log"

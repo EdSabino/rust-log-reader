@@ -80,7 +80,7 @@ impl Logs {
                 _ => {
                     let len = lines[i].len();
                     let useful_line = &lines[i][1..len-2].split(",").collect::<Vec<_>>();
-                    transactions.get_mut(useful_line[0]).unwrap().change(useful_line[1].to_string(), useful_line[2].parse().unwrap());
+                    transactions.get_mut(useful_line[0]).unwrap().change(useful_line[2].to_string(), useful_line[3].parse().unwrap());
                 }
             }
         }

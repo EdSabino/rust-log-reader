@@ -47,6 +47,19 @@ fn start(mut client: Client) -> Result<(), Box<dyn Error>> {
 
     let update_statement = table.update_from_hash(pk, state);
     client.execute(update_statement.as_str(), &[]).unwrap();
+
+    for (key, tr) in transactions.into_iter() {
+        if tr.commited {
+
+            if tr.finalized {
+                println!("Transação {} não sofreu REDO", key.to_string());
+            } else {
+                println!("Transação {} sofreu REDO", key.to_string());
+            }
+        } else {
+            println!("Transação {} foi ignorada", key.to_string());
+        }
+    }
     
     Ok(())
 }

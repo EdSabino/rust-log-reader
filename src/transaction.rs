@@ -19,7 +19,6 @@ impl Transaction {
         for (key, value) in self.transaction_state.clone().into_iter() {
             state.insert(key, value);
         }
-        self.finalized = true;
     }
 
     pub fn mark_commited(&mut self) {
